@@ -16,7 +16,7 @@ function util_define_hopper()
     shop_buy = 0,
     shop_sell = 0,
     layout = {
-      {19, 29, "OutputX"},
+      {19, 29, "InputX"},
       {64, 29, "OutputX"},
       {7, 67},
       {30, 67},
@@ -40,7 +40,8 @@ function util_define_hopper()
     tools = {"mouse1", "hammer1"},
     placeable = true
   }, "sprites/hopper_item.png", "sprites/hopper_menu.png", {
-    define = "hopper_define"
+    define = "hopper_define",
+    tick = "hopper_tick"
   })
 
   -- define workbench recipe
@@ -50,6 +51,9 @@ function util_define_hopper()
     { item = "sticks2", amount = 5},
   }
   define_recipe = api_define_recipe("crafting", "hopper_hopper", recipe, 1)
+  api_define_workbench("Hoppers", {
+    t1 = "Hoppers"
+  })
 
   -- return "Success" only if both defines work
   if (define_obj == "Success" and define_recipe == "Success") then return "Success" end
