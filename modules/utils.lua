@@ -135,6 +135,7 @@ function util_get_slot_definition(oid)
       output = output_slots
     }
     DEFINITION_CACHED[oid] = true;
+
     return DEFINITION_CACHE[oid]
   end
   

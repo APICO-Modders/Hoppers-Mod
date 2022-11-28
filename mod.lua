@@ -7,7 +7,7 @@ DEFINITION_CACHE = {}
 VALID_INPUT_OIDS = {
   'beehive1', 'beehive2', 'beehive3', 'beehive4', 'beehive5', 'beehive6', 'beehive7', 'beehive8',
   'beehive9', 'beehive10', 'beehive11', 'beehive13',
-  'hive1', 'hive2', 'hive3', 'uncapping_bench', 'uncapper', 'extractor', 'centrifuge', 'centrifuge2'
+  'hive1', 'hive2', 'hive3', 'uncappingbench', 'uncapper', 'extractor', 'centrifuge', 'centrifuge2'
 }
 
 HOPPERS = {}
@@ -47,6 +47,7 @@ function click()
     slot = api_get_highlighted("slot")
     if (slot ~= nil and api_gp(slot, "index") == 0) then
       item_id = util_get_id(mouse)
+      api_log("click()", "Gather: " .. item_id)
       if (item_id == "") then
         api_sp(menu, "gather", "")
         api_slot_clear(slot)
@@ -60,6 +61,7 @@ function click()
     slot = api_get_highlighted("slot")
     if (slot ~= nil and api_gp(slot, "index") == 1) then
       item_id = util_get_id(mouse)
+      api_log("click()", "Distribute: " .. item_id)
       if (item_id == "") then
         api_sp(menu, "distribute", "")
         api_slot_clear(slot)

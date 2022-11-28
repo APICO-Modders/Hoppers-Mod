@@ -58,8 +58,8 @@ function hopper_process(menu_id)
   gather = api_gp(menu_id, "gather")
   distro = api_gp(menu_id, "distribute")
   coord = {
-    x = api_gp(menu_id, "obj_x"),
-    y = api_gp(menu_id, "obj_y")
+    x = api_gp(menu_id, "obj_x") + 8,
+    y = api_gp(menu_id, "obj_y") + 8
   }
 
   -- if theres no imprint why bother
@@ -154,6 +154,7 @@ function hopper_process(menu_id)
                   elseif (string.find(current_item, "frame")) then
                     allowed_item = "framex"
                   end
+
                   -- only if the wanted item matches what we are supposed to distribute
                   if (allowed_item == wanted_item and current_item == distro) then
                     is_valid = api_slot_validate(distro_slot["id"], wanted_item, hopper_slots[h]["stats"])
