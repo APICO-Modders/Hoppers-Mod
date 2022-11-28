@@ -11,7 +11,7 @@ function util_define_hopper()
     id = "hopper",
     name = "Hopper",
     category = "Tools",
-    tooltip = "Let's you automatically gather and distribute items to other machines",
+    tooltip = "Lets you automatically gather and distribute items to other machines",
     shop_key = false,
     shop_buy = 0,
     shop_sell = 0,
