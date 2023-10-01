@@ -6,7 +6,7 @@ DEFINITION_CACHE = {}
 -- narrow down menu oids to check for distribution
 VALID_INPUT_OIDS = {
   'beehive1', 'beehive2', 'beehive3', 'beehive4', 'beehive5', 'beehive6', 'beehive7', 'beehive8',
-  'beehive9', 'beehive10', 'beehive11', 'beehive13',
+  'beehive9', 'beehive10', 'beehive11', 'beehive13', 'beehive14', 'beehive15', 'beehive16', 'beehive17', 'beehive18', 'beehive19', 'beehive20', 'beehive21', 'beehive22', 'beehive23', 'beehive24', 'beehive25',
   'hive1', 'hive2', 'hive3', 'uncappingbench', 'uncapper', 'extractor', 'centrifuge', 'centrifuge2'
 }
 
